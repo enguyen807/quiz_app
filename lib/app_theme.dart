@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppTheme {
   ThemeData themeData = ThemeData(
     scaffoldBackgroundColor: Colors.green.shade300,
+    textTheme: Typography.whiteHelsinki,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
         shape: MaterialStatePropertyAll<OutlinedBorder>(
