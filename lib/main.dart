@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/app_quiz.dart';
+import 'package:quiz_app/app_theme.dart';
 
 void main() {
   runApp(const Main());
@@ -10,6 +11,12 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AppQuiz();
+    return MaterialApp(
+      title: 'Learn Estonian',
+      theme: AppTheme().themeData,
+      home: const Scaffold(
+        body: AppQuiz(),
+      ),
+    );
   }
 }
