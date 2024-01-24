@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/app_theme.dart';
-import 'package:quiz_app/app_home.dart';
+import 'package:quiz_app/app_quiz.dart';
 
 void main() {
-  runApp(const QuizApp());
+  runApp(const Main());
 }
 
-class QuizApp extends StatelessWidget {
-  const QuizApp({super.key});
+class Main extends StatelessWidget {
+  const Main({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Learn Estonian',
-      theme: AppTheme().themeData,
-      home: const Scaffold(
-        body: AppHome(),
-      ),
-    );
+    return const AppQuiz();
   }
 }
