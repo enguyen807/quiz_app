@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:quiz_app/app_theme.dart';
 import 'package:quiz_app/app_home.dart';
+import 'package:quiz_app/app_quiz_questions.dart';
 
 class AppQuiz extends StatefulWidget {
   const AppQuiz({super.key});
@@ -13,14 +12,18 @@ class AppQuiz extends StatefulWidget {
 }
 
 class _AppQuizState extends State<AppQuiz> {
+  Widget activeScreen = const AppHome();
+
+  void switchScreen() {
+    setState(() {
+      activeScreen = const AppQuizQuestions();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Learn Estonian',
-      theme: AppTheme().themeData,
-      home: const Scaffold(
-        body: AppHome(),
-      ),
-    );
+    return Container(
+        child: activeScreen,
+      );
   }
 }
