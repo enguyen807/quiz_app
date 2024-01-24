@@ -14,6 +14,7 @@ class AppHome extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             scale: 2,
+            opacity: const AlwaysStoppedAnimation(.7),
           ),
           const SizedBox(height: 20),
           const Text(
@@ -21,12 +22,13 @@ class AppHome extends StatelessWidget {
             style: TextStyle(fontSize: 24),
           ),
           const SizedBox(height: 20),
-          const ElevatedButton(
+          ElevatedButton.icon(
             onPressed: onPressed,
-            child: Text(
-              'Start Quiz',
-              style: TextStyle(fontSize: 18),
+            icon: const Icon(Icons.arrow_forward_rounded),
+            style: ElevatedButton.styleFrom(
+              textStyle: const TextStyle(fontSize: 18),
             ),
+            label: const Text('Start Quiz'),
           )
         ],
       ),
