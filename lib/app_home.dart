@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-void onPressed() {}
-
 class AppHome extends StatelessWidget {
-  const AppHome({super.key});
+  const AppHome(this.startQuiz,{super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class AppHome extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton.icon(
-            onPressed: onPressed,
+            onPressed: startQuiz,
             icon: const Icon(Icons.arrow_forward_rounded),
             style: ElevatedButton.styleFrom(
               textStyle: const TextStyle(fontSize: 18),
