@@ -14,7 +14,9 @@ class QuizApp extends StatelessWidget {
     return MaterialApp(
       title: 'Learn Estonian',
       theme: AppTheme().themeData,
-      home: const AppHome(),
+      home: const Scaffold(
+        body: AppHome(),
+      ),
     );
   }
 }
