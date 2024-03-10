@@ -11,6 +11,9 @@ class AppTheme {
             borderRadius: BorderRadius.circular(5.0),
           ),
         ),
+        padding: const MaterialStatePropertyAll<EdgeInsets>(
+          EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0)
+        ),
         foregroundColor: const MaterialStatePropertyAll<Color>(Colors.white),
         backgroundColor: MaterialStateProperty.resolveWith<Color?>(
           (Set<MaterialState> states) {
